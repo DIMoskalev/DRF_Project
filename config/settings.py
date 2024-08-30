@@ -20,9 +20,11 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_yasg',
     'corsheaders',
+    'django_celery_beat',
 
     'users',
     'vehicle',
+
 ]
 
 MIDDLEWARE = [
@@ -118,3 +120,6 @@ CSRF_TRUSTED_ORIGINS = [
 
 CUR_API_URL = 'https://api.currencyapi.com/'
 CUR_API_KEY = 'cur_live_Yxgo2w8KlhOzjEsJ5eZ5t9gtu1Sa2ixuLKRUh21w'
+
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
+CELERY_RESULT_BACKEND = "redis://127.0.0.1:6379/0"
